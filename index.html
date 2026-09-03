@@ -1,6 +1,6 @@
-<title>Nur App Privacy Policy</title>
+<title>Nur App Privacy Policy — Nemodroid</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap">
 
 <style>
   :root {
@@ -13,7 +13,6 @@
     --accent-bg: #FDF8EF;
     --header-bg: rgba(250,250,249,0.92);
   }
-
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg:        #0D1117;
@@ -26,7 +25,6 @@
       --header-bg: rgba(13,17,23,0.92);
     }
   }
-
   :root[data-theme="dark"] {
     --bg:        #0D1117;
     --surface:   #161B22;
@@ -49,436 +47,486 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Sticky mini-header ── */
+  /* ── Topbar ── */
   .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    position: sticky; top: 0; z-index: 10;
     background: var(--header-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    padding: 10px 24px;
+    display: flex; align-items: center; gap: 10px;
   }
   .topbar-logo {
     width: 26px; height: 26px;
-    background: var(--accent);
-    border-radius: 6px;
+    background: var(--accent); border-radius: 6px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 14px; font-weight: 700;
-    color: #fff;
+    font-size: 14px; font-weight: 700; color: #fff;
     font-family: 'Playfair Display', Georgia, serif;
-    letter-spacing: -0.5px;
-    flex-shrink: 0;
+    letter-spacing: -0.5px; flex-shrink: 0;
   }
-  .topbar-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
+  .topbar-name { font-size: 13px; font-weight: 600; color: var(--text); }
+  .topbar-sep  { color: var(--border); margin: 0 4px; }
+  .topbar-doc  { font-size: 13px; color: var(--muted); flex: 1; }
+
+  /* Language toggle */
+  .lang-toggle {
+    display: flex; gap: 4px; margin-left: auto;
   }
-  .topbar-sep { color: var(--border); margin: 0 4px; }
-  .topbar-doc {
-    font-size: 13px;
-    color: var(--muted);
+  .lang-btn {
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer;
+    transition: all 0.15s;
+  }
+  .lang-btn.active {
+    background: var(--accent); color: #fff; border-color: var(--accent);
   }
 
   /* ── Page wrapper ── */
-  .page {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 56px 32px 80px;
-  }
+  .page { max-width: 760px; margin: 0 auto; padding: 56px 32px 80px; }
 
-  /* ── Hero ── */
-  .hero { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
-
-  .hero-eyebrow {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 14px;
-  }
-
-  h1 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(28px, 5vw, 40px);
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.2;
-    margin-bottom: 16px;
-    text-wrap: balance;
-  }
-
-  .hero-meta {
-    font-size: 13px;
-    color: var(--muted);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 20px;
-  }
-  .hero-meta span::before { content: "· "; }
-  .hero-meta span:first-child::before { content: ""; }
-
-  /* ── Table of contents ── */
-  .toc {
+  /* ── Developer banner (issue 5 fix) ── */
+  .dev-banner {
     background: var(--accent-bg);
     border: 1px solid var(--border);
     border-left: 3px solid var(--accent);
     border-radius: 8px;
-    padding: 20px 24px;
-    margin-bottom: 48px;
+    padding: 14px 20px;
+    margin-bottom: 32px;
+    display: flex; flex-wrap: wrap; gap: 8px 32px;
+    align-items: center;
+  }
+  .dev-banner-item { font-size: 13px; color: var(--text); }
+  .dev-banner-item strong { color: var(--accent); }
+
+  /* ── Hero ── */
+  .hero { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+  .hero-eyebrow {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 5vw, 40px); font-weight: 700;
+    color: var(--text); line-height: 1.2; margin-bottom: 16px;
+    text-wrap: balance;
+  }
+  .hero-meta {
+    font-size: 13px; color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: 4px 20px;
+  }
+  .hero-meta span::before { content: "· "; }
+  .hero-meta span:first-child::before { content: ""; }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--accent-bg); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 8px;
+    padding: 20px 24px; margin-bottom: 48px;
   }
   .toc-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 12px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
   }
   .toc ol {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px 24px;
+    list-style: none; display: grid;
+    grid-template-columns: 1fr 1fr; gap: 4px 24px;
   }
   @media (max-width: 500px) { .toc ol { grid-template-columns: 1fr; } }
   .toc a {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 13.5px;
-    display: flex;
-    gap: 8px;
-    align-items: baseline;
+    text-decoration: none; color: var(--text);
+    font-size: 13.5px; display: flex; gap: 8px; align-items: baseline;
   }
   .toc a:hover { color: var(--accent); }
   .toc-num {
-    font-size: 11px;
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-    min-width: 18px;
-    flex-shrink: 0;
+    font-size: 11px; color: var(--muted);
+    font-variant-numeric: tabular-nums; min-width: 18px; flex-shrink: 0;
   }
 
   /* ── Sections ── */
   section { margin-bottom: 44px; scroll-margin-top: 72px; }
-
   h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    font-size: 20px; font-weight: 600; color: var(--text);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
   }
   .sec-num {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--accent);
-    background: var(--accent-bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2px 7px;
-    flex-shrink: 0;
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    color: var(--accent); background: var(--accent-bg);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 2px 7px; flex-shrink: 0;
   }
-
   p { margin-bottom: 12px; color: var(--text); }
   p:last-child { margin-bottom: 0; }
-
-  ul, ol {
-    padding-left: 20px;
-    margin-bottom: 12px;
-  }
+  ul, ol { padding-left: 20px; margin-bottom: 12px; }
   li { margin-bottom: 6px; color: var(--text); }
 
   /* ── Data table ── */
   .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 13.5px;
-    overflow-x: auto;
-    display: block;
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0; font-size: 13.5px; overflow-x: auto; display: block;
   }
   .data-table th {
-    background: var(--accent-bg);
-    color: var(--text);
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 10px 14px;
-    border: 1px solid var(--border);
-    text-align: left;
-    white-space: nowrap;
+    background: var(--accent-bg); color: var(--text);
+    font-weight: 600; font-size: 12px; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 10px 14px;
+    border: 1px solid var(--border); text-align: left; white-space: nowrap;
   }
   .data-table td {
-    padding: 10px 14px;
-    border: 1px solid var(--border);
-    vertical-align: top;
-    color: var(--text);
+    padding: 10px 14px; border: 1px solid var(--border);
+    vertical-align: top; color: var(--text);
   }
   .data-table tr:nth-child(even) td { background: var(--accent-bg); }
 
   /* ── Callout ── */
   .callout {
-    background: var(--accent-bg);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    border-radius: 6px;
-    padding: 14px 18px;
-    font-size: 14px;
-    color: var(--text);
-    margin: 16px 0;
+    background: var(--accent-bg); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 6px;
+    padding: 14px 18px; font-size: 14px; color: var(--text); margin: 16px 0;
   }
 
   /* ── Contact card ── */
   .contact-card {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: var(--surface);
+    border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px 24px; display: flex; flex-direction: column;
+    gap: 6px; background: var(--surface);
   }
   .contact-card strong { font-weight: 600; font-size: 15px; }
-  .contact-card span { color: var(--muted); font-size: 13.5px; }
-  .contact-card a { color: var(--accent); text-decoration: none; }
+  .contact-card span  { color: var(--muted); font-size: 13.5px; }
+  .contact-card a     { color: var(--accent); text-decoration: none; }
   .contact-card a:hover { text-decoration: underline; }
 
   /* ── Footer ── */
   footer {
-    margin-top: 64px;
-    padding-top: 24px;
+    margin-top: 64px; padding-top: 24px;
     border-top: 1px solid var(--border);
-    font-size: 12.5px;
-    color: var(--muted);
-    text-align: center;
-    line-height: 1.8;
+    font-size: 12.5px; color: var(--muted);
+    text-align: center; line-height: 1.8;
   }
+
+  /* ── Language visibility ── */
+  .lang-zh { display: none; font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+  body.zh .lang-en { display: none; }
+  body.zh .lang-zh { display: block; }
+  body.zh h2 { font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; }
 </style>
 
+<!-- ── Top bar ── -->
 <div class="topbar">
   <div class="topbar-logo">ن</div>
   <span class="topbar-name">Nur App</span>
   <span class="topbar-sep">|</span>
-  <span class="topbar-doc">Privacy Policy</span>
+  <span class="topbar-doc">Privacy Policy · 隐私政策</span>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btn-zh" onclick="setLang('zh')">中文</button>
+  </div>
 </div>
 
 <div class="page">
 
-  <div class="hero">
-    <span class="hero-eyebrow">Legal</span>
-    <h1>Privacy Policy</h1>
-    <div class="hero-meta">
-      <span>Nur App — نور</span>
-      <span>Developer: Nemodroid</span>
-      <span>Effective: September 2, 2025</span>
-      <span>Last updated: September 2, 2025</span>
+  <!-- ══════════════════════════════════════════════════ ENGLISH ══ -->
+  <div class="lang-en">
+
+    <!-- Developer banner — issue 5 fix -->
+    <div class="dev-banner">
+      <div class="dev-banner-item"><strong>App Name:</strong> Nur App (نور)</div>
+      <div class="dev-banner-item"><strong>Developer:</strong> Nemodroid</div>
+      <div class="dev-banner-item"><strong>Contact:</strong> support@nemodroid.com</div>
     </div>
-  </div>
 
-  <div class="toc">
-    <div class="toc-title">Contents</div>
-    <ol>
-      <li><a href="#s1"><span class="toc-num">01</span>Introduction</a></li>
-      <li><a href="#s2"><span class="toc-num">02</span>Information We Collect</a></li>
-      <li><a href="#s3"><span class="toc-num">03</span>How We Use Your Information</a></li>
-      <li><a href="#s4"><span class="toc-num">04</span>Third-Party Services</a></li>
-      <li><a href="#s5"><span class="toc-num">05</span>Data Storage &amp; Security</a></li>
-      <li><a href="#s6"><span class="toc-num">06</span>Data Sharing</a></li>
-      <li><a href="#s7"><span class="toc-num">07</span>Your Rights</a></li>
-      <li><a href="#s8"><span class="toc-num">08</span>Children's Privacy</a></li>
-      <li><a href="#s9"><span class="toc-num">09</span>Changes to This Policy</a></li>
-      <li><a href="#s10"><span class="toc-num">10</span>Contact Us</a></li>
-    </ol>
-  </div>
-
-  <!-- 1 -->
-  <section id="s1">
-    <h2><span class="sec-num">01</span>Introduction</h2>
-    <p>Nur App ("نور", "we", "our", or "the App") is an Islamic companion application developed by Nemodroid. It provides prayer times, Holy Quran reading, Adhkar, Islamic knowledge quizzes, Tasbih counter, and related features.</p>
-    <p>This Privacy Policy explains what information we collect when you use the App, how we use it, and the choices you have. By using Nur App, you agree to the practices described in this policy.</p>
-  </section>
-
-  <!-- 2 -->
-  <section id="s2">
-    <h2><span class="sec-num">02</span>Information We Collect</h2>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Data Type</th>
-          <th>Examples</th>
-          <th>Purpose</th>
-          <th>Required?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Location</strong></td>
-          <td>GPS coordinates</td>
-          <td>Calculate accurate prayer times and Qibla direction for your position</td>
-          <td>Optional — you can enter a city manually</td>
-        </tr>
-        <tr>
-          <td><strong>Account Info</strong></td>
-          <td>Display name, email address, profile photo URL</td>
-          <td>Create and identify your account for online features (quiz battles, points)</td>
-          <td>Optional — Guest mode requires no account</td>
-        </tr>
-        <tr>
-          <td><strong>Device Identifier</strong></td>
-          <td>Android ID (for Guest accounts only)</td>
-          <td>Persist your session and points across app restarts without an account</td>
-          <td>Automatically used in Guest mode</td>
-        </tr>
-        <tr>
-          <td><strong>Usage Data</strong></td>
-          <td>Quiz scores, battle results, earned points, prayer preferences, Tasbih sessions</td>
-          <td>Power in-app features, display your progress, enable leaderboard participation</td>
-          <td>Yes — core to app functionality</td>
-        </tr>
-        <tr>
-          <td><strong>App Settings</strong></td>
-          <td>Azan type, reminder minutes, language preference</td>
-          <td>Remember your preferences between sessions</td>
-          <td>Yes — stored locally on device</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="callout">
-      We do <strong>not</strong> collect payment information, precise health data, contacts, photos, camera, microphone, or any data unrelated to the features listed above.
+    <div class="hero">
+      <span class="hero-eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <div class="hero-meta">
+        <span>Nur App — نور</span>
+        <span>Developer: Nemodroid</span>
+        <span>Effective: September 2, 2025</span>
+        <span>Last updated: September 2, 2025</span>
+      </div>
     </div>
-  </section>
 
-  <!-- 3 -->
-  <section id="s3">
-    <h2><span class="sec-num">03</span>How We Use Your Information</h2>
-    <ul>
-      <li>Provide and improve core app features (prayer times, Quran reader, quiz battles).</li>
-      <li>Identify your account across sessions and devices.</li>
-      <li>Display your quiz points, level, and battle history inside the App.</li>
-      <li>Send local notifications for prayer times and reminders — we do not send marketing messages.</li>
-      <li>Diagnose crashes and improve stability (anonymous, aggregated only).</li>
-    </ul>
-    <p>We do not use your data for advertising, profiling, or any purpose beyond what is needed to operate the App.</p>
-  </section>
-
-  <!-- 4 -->
-  <section id="s4">
-    <h2><span class="sec-num">04</span>Third-Party Services</h2>
-    <p>Nur App integrates the following third-party services. Each service has its own privacy policy governing how they handle your data.</p>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Service</th>
-          <th>Provider</th>
-          <th>Data Shared</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Firebase Authentication</strong></td>
-          <td>Google LLC</td>
-          <td>Anonymous session token (Guest); account credentials (signed-in users)</td>
-        </tr>
-        <tr>
-          <td><strong>Cloud Firestore</strong></td>
-          <td>Google LLC</td>
-          <td>Account profile, quiz scores, battle results, earned points</td>
-        </tr>
-        <tr>
-          <td><strong>Huawei Account Kit (HMS)</strong></td>
-          <td>Huawei Technologies Co., Ltd.</td>
-          <td>Huawei ID open identifier, display name, email (if granted), profile photo URL</td>
-        </tr>
-        <tr>
-          <td><strong>AppGallery Connect</strong></td>
-          <td>Huawei Technologies Co., Ltd.</td>
-          <td>App configuration and crash reporting</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Google's privacy policy: <a href="https://policies.google.com/privacy" style="color:var(--accent)">policies.google.com/privacy</a></p>
-    <p>Huawei's privacy policy: <a href="https://consumer.huawei.com/en/privacy/privacy-policy" style="color:var(--accent)">consumer.huawei.com/en/privacy</a></p>
-  </section>
-
-  <!-- 5 -->
-  <section id="s5">
-    <h2><span class="sec-num">05</span>Data Storage &amp; Security</h2>
-    <p>Your account profile and quiz progress are stored in Google Cloud Firestore with industry-standard encryption in transit (TLS) and at rest. App preferences (Azan settings, language) are stored locally on your device using Android DataStore and are never transmitted.</p>
-    <p>Location coordinates are used momentarily to compute prayer times and are not transmitted to our servers or stored anywhere outside your device.</p>
-    <p>We implement reasonable technical safeguards; however, no system is completely secure. If you believe your data has been compromised, please contact us immediately.</p>
-  </section>
-
-  <!-- 6 -->
-  <section id="s6">
-    <h2><span class="sec-num">06</span>Data Sharing</h2>
-    <p>We do <strong>not</strong> sell, rent, or trade your personal information.</p>
-    <p>We share data only in the following limited cases:</p>
-    <ul>
-      <li><strong>Service providers:</strong> Firebase and Huawei as described in Section 4, solely to operate the App.</li>
-      <li><strong>Legal requirements:</strong> If required by applicable law, court order, or to protect the rights and safety of users or the public.</li>
-    </ul>
-  </section>
-
-  <!-- 7 -->
-  <section id="s7">
-    <h2><span class="sec-num">07</span>Your Rights</h2>
-    <p>Depending on your country of residence, you may have the right to:</p>
-    <ul>
-      <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
-      <li><strong>Correction</strong> — update inaccurate or incomplete information.</li>
-      <li><strong>Deletion</strong> — request that we delete your account and associated data.</li>
-      <li><strong>Withdrawal of consent</strong> — revoke location permission at any time in your device Settings.</li>
-      <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
-    </ul>
-    <p>To exercise any of these rights, contact us using the details in Section 10. We will respond within 30 days.</p>
-    <div class="callout">
-      To delete your account data: log out of the App, then contact us at the email below with your display name or account email. We will permanently remove your Firestore records within 7 business days.
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#s1"><span class="toc-num">01</span>Introduction</a></li>
+        <li><a href="#s2"><span class="toc-num">02</span>Information We Collect</a></li>
+        <li><a href="#s3"><span class="toc-num">03</span>How We Use Your Information</a></li>
+        <li><a href="#s4"><span class="toc-num">04</span>Third-Party Services</a></li>
+        <li><a href="#s5"><span class="toc-num">05</span>Data Storage &amp; Security</a></li>
+        <li><a href="#s6"><span class="toc-num">06</span>Data Sharing</a></li>
+        <li><a href="#s7"><span class="toc-num">07</span>Your Rights</a></li>
+        <li><a href="#s8"><span class="toc-num">08</span>Children's Privacy</a></li>
+        <li><a href="#s9"><span class="toc-num">09</span>Changes to This Policy</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span>Contact Us</a></li>
+      </ol>
     </div>
-  </section>
 
-  <!-- 8 -->
-  <section id="s8">
-    <h2><span class="sec-num">08</span>Children's Privacy</h2>
-    <p>Nur App is rated for users aged 16 and above. We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
-  </section>
+    <section id="s1">
+      <h2><span class="sec-num">01</span>Introduction</h2>
+      <p>Nur App ("نور", "we", "our", or "the App") is an Islamic companion application developed by <strong>Nemodroid</strong>. It provides prayer times, Holy Quran reading, Adhkar, Islamic knowledge quizzes, Tasbih counter, and related features.</p>
+      <p>This Privacy Policy explains what information we collect when you use the App, how we use it, and the choices you have. By using Nur App, you agree to the practices described in this policy.</p>
+    </section>
 
-  <!-- 9 -->
-  <section id="s9">
-    <h2><span class="sec-num">09</span>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. Continued use of the App after changes take effect constitutes acceptance of the updated policy.</p>
-  </section>
+    <section id="s2">
+      <h2><span class="sec-num">02</span>Information We Collect</h2>
+      <table class="data-table">
+        <thead><tr><th>Data Type</th><th>Examples</th><th>Purpose</th><th>Required?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Location</strong></td><td>GPS coordinates</td><td>Calculate accurate prayer times and Qibla direction for your position</td><td>Optional — you can enter a city manually</td></tr>
+          <tr><td><strong>Account Info</strong></td><td>Display name, email address, profile photo URL</td><td>Create and identify your account for online features (quiz battles, points)</td><td>Optional — Guest mode requires no account</td></tr>
+          <tr><td><strong>Device Identifier</strong></td><td>Android ID (for Guest accounts only)</td><td>Persist your session and points across app restarts without an account</td><td>Automatically used in Guest mode</td></tr>
+          <tr><td><strong>Usage Data</strong></td><td>Quiz scores, battle results, earned points, prayer preferences, Tasbih sessions</td><td>Power in-app features, display your progress, enable leaderboard participation</td><td>Yes — core to app functionality</td></tr>
+          <tr><td><strong>App Settings</strong></td><td>Azan type, reminder minutes, language preference</td><td>Remember your preferences between sessions</td><td>Yes — stored locally on device</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">We do <strong>not</strong> collect payment information, precise health data, contacts, photos, camera, microphone, or any data unrelated to the features listed above.</div>
+    </section>
 
-  <!-- 10 -->
-  <section id="s10">
-    <h2><span class="sec-num">10</span>Contact Us</h2>
-    <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out:</p>
-    <div class="contact-card">
-      <strong>Nemodroid — Nur App Privacy</strong>
-      <span>Email: <a href="mailto:support@nemodroid.com">support@nemodroid.com</a></span>
-      <span>Developer: Nemodroid</span>
-      <span>App: Nur App (نور) — Islamic Companion</span>
+    <section id="s3">
+      <h2><span class="sec-num">03</span>How We Use Your Information</h2>
+      <ul>
+        <li>Provide and improve core app features (prayer times, Quran reader, quiz battles).</li>
+        <li>Identify your account across sessions and devices.</li>
+        <li>Display your quiz points, level, and battle history inside the App.</li>
+        <li>Send local notifications for prayer times and reminders — we do not send marketing messages.</li>
+        <li>Diagnose crashes and improve stability (anonymous, aggregated only).</li>
+      </ul>
+      <p>We do not use your data for advertising, profiling, or any purpose beyond what is needed to operate the App.</p>
+    </section>
+
+    <section id="s4">
+      <h2><span class="sec-num">04</span>Third-Party Services</h2>
+      <p>Nur App integrates the following third-party services. Each service has its own privacy policy governing how they handle your data.</p>
+      <table class="data-table">
+        <thead><tr><th>Service</th><th>Provider</th><th>Data Shared</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Firebase Authentication</strong></td><td>Google LLC</td><td>Anonymous session token (Guest); account credentials (signed-in users)</td></tr>
+          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>Account profile, quiz scores, battle results, earned points</td></tr>
+          <tr><td><strong>Huawei Account Kit (HMS)</strong></td><td>Huawei Technologies Co., Ltd.</td><td>Huawei ID open identifier, display name, email (if granted), profile photo URL</td></tr>
+          <tr><td><strong>AppGallery Connect</strong></td><td>Huawei Technologies Co., Ltd.</td><td>App configuration and crash reporting</td></tr>
+        </tbody>
+      </table>
+      <p>Google's privacy policy: <a href="https://policies.google.com/privacy" style="color:var(--accent)">policies.google.com/privacy</a></p>
+      <p>Huawei's privacy policy: <a href="https://consumer.huawei.com/en/privacy/privacy-policy" style="color:var(--accent)">consumer.huawei.com/en/privacy</a></p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="sec-num">05</span>Data Storage &amp; Security</h2>
+      <p>Your account profile and quiz progress are stored in Google Cloud Firestore with industry-standard encryption in transit (TLS) and at rest. App preferences (Azan settings, language) are stored locally on your device using Android DataStore and are never transmitted.</p>
+      <p>Location coordinates are used momentarily to compute prayer times and are not transmitted to our servers or stored anywhere outside your device.</p>
+      <p>We implement reasonable technical safeguards; however, no system is completely secure. If you believe your data has been compromised, please contact us immediately.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="sec-num">06</span>Data Sharing</h2>
+      <p>We do <strong>not</strong> sell, rent, or trade your personal information.</p>
+      <p>We share data only in the following limited cases:</p>
+      <ul>
+        <li><strong>Service providers:</strong> Firebase and Huawei as described in Section 4, solely to operate the App.</li>
+        <li><strong>Legal requirements:</strong> If required by applicable law, court order, or to protect the rights and safety of users or the public.</li>
+      </ul>
+    </section>
+
+    <section id="s7">
+      <h2><span class="sec-num">07</span>Your Rights</h2>
+      <p>Depending on your country of residence, you may have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction</strong> — update inaccurate or incomplete information.</li>
+        <li><strong>Deletion</strong> — request that we delete your account and associated data.</li>
+        <li><strong>Withdrawal of consent</strong> — revoke location permission at any time in your device Settings.</li>
+        <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us using the details in Section 10. We will respond within 30 days.</p>
+      <div class="callout">To delete your account data: log out of the App, then contact us at the email below with your display name or account email. We will permanently remove your Firestore records within 7 business days.</div>
+    </section>
+
+    <section id="s8">
+      <h2><span class="sec-num">08</span>Children's Privacy</h2>
+      <p>Nur App is rated for users aged 16 and above. We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="sec-num">09</span>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. Continued use of the App after changes take effect constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="sec-num">10</span>Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out:</p>
+      <div class="contact-card">
+        <strong>Nemodroid — Nur App Privacy</strong>
+        <span>Email: <a href="mailto:support@nemodroid.com">support@nemodroid.com</a></span>
+        <span>Developer: Nemodroid</span>
+        <span>App: Nur App (نور) — Islamic Companion</span>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Nemodroid. All rights reserved.<br>
+      Nur App (نور) — Your companion for prayer, Quran &amp; remembrance.
+    </footer>
+
+  </div><!-- /lang-en -->
+
+
+  <!-- ══════════════════════════════════════════════════ 中文 ══ -->
+  <div class="lang-zh">
+
+    <!-- 开发者信息横幅 -->
+    <div class="dev-banner">
+      <div class="dev-banner-item"><strong>应用名称：</strong>Nur App（نور）</div>
+      <div class="dev-banner-item"><strong>开发者：</strong>Nemodroid</div>
+      <div class="dev-banner-item"><strong>联系方式：</strong>support@nemodroid.com</div>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2025 Nemodroid. All rights reserved.<br>
-    Nur App (نور) — Your companion for prayer, Quran &amp; remembrance.
-  </footer>
+    <div class="hero">
+      <span class="hero-eyebrow">法律</span>
+      <h2 style="font-size:clamp(28px,5vw,40px);font-weight:700;font-family:'Noto Sans SC',sans-serif;margin-bottom:16px;">隐私政策</h2>
+      <div class="hero-meta">
+        <span>Nur App — نور</span>
+        <span>开发者：Nemodroid</span>
+        <span>生效日期：2025年9月2日</span>
+        <span>最后更新：2025年9月2日</span>
+      </div>
+    </div>
 
-</div>
+    <div class="toc">
+      <div class="toc-title">目录</div>
+      <ol>
+        <li><a href="#z1"><span class="toc-num">01</span>简介</a></li>
+        <li><a href="#z2"><span class="toc-num">02</span>我们收集的信息</a></li>
+        <li><a href="#z3"><span class="toc-num">03</span>信息使用方式</a></li>
+        <li><a href="#z4"><span class="toc-num">04</span>第三方服务</a></li>
+        <li><a href="#z5"><span class="toc-num">05</span>数据存储与安全</a></li>
+        <li><a href="#z6"><span class="toc-num">06</span>数据共享</a></li>
+        <li><a href="#z7"><span class="toc-num">07</span>您的权利</a></li>
+        <li><a href="#z8"><span class="toc-num">08</span>儿童隐私</a></li>
+        <li><a href="#z9"><span class="toc-num">09</span>政策变更</a></li>
+        <li><a href="#z10"><span class="toc-num">10</span>联系我们</a></li>
+      </ol>
+    </div>
+
+    <section id="z1">
+      <h2><span class="sec-num">01</span>简介</h2>
+      <p>Nur App（"نور"，以下简称"本应用"、"我们"）是由 <strong>Nemodroid</strong> 开发的伊斯兰伴侣应用程序，提供礼拜时间查询、神圣古兰经阅读、赞词（Adhkar）、伊斯兰知识问答、念珠计数器等功能。</p>
+      <p>本隐私政策说明了您在使用本应用时我们收集哪些信息、如何使用这些信息以及您的选择权利。使用 Nur App 即表示您同意本政策所述的相关做法。</p>
+    </section>
+
+    <section id="z2">
+      <h2><span class="sec-num">02</span>我们收集的信息</h2>
+      <table class="data-table">
+        <thead><tr><th>数据类型</th><th>示例</th><th>用途</th><th>是否必须</th></tr></thead>
+        <tbody>
+          <tr><td><strong>位置信息</strong></td><td>GPS 坐标</td><td>计算您所在位置的准确礼拜时间和朝拜方向（基卜拉）</td><td>可选 — 您也可以手动输入城市名称</td></tr>
+          <tr><td><strong>账户信息</strong></td><td>显示名称、电子邮箱、头像链接</td><td>为在线功能（知识对战、积分排行）创建并识别您的账户</td><td>可选 — 访客模式无需注册账户</td></tr>
+          <tr><td><strong>设备标识符</strong></td><td>Android ID（仅限访客账户）</td><td>在无需账户的情况下跨会话保存您的进度和积分</td><td>访客模式下自动使用</td></tr>
+          <tr><td><strong>使用数据</strong></td><td>问答分数、对战结果、积分、礼拜偏好、念珠记录</td><td>支持应用功能、显示进度、参与排行榜</td><td>是 — 核心功能所需</td></tr>
+          <tr><td><strong>应用设置</strong></td><td>召唤礼拜类型、提醒时间、语言偏好</td><td>在会话之间保存您的偏好设置</td><td>是 — 仅存储在本地设备</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">我们<strong>不</strong>收集支付信息、精确健康数据、通讯录、照片、摄像头、麦克风，或与上述功能无关的任何数据。</div>
+    </section>
+
+    <section id="z3">
+      <h2><span class="sec-num">03</span>信息使用方式</h2>
+      <ul>
+        <li>提供和改善核心应用功能（礼拜时间、古兰经阅读、知识对战）。</li>
+        <li>在不同会话和设备之间识别您的账户。</li>
+        <li>在应用内显示您的问答积分、等级和对战历史。</li>
+        <li>发送礼拜时间和提醒的本地通知 — 我们不发送营销信息。</li>
+        <li>诊断崩溃并提高稳定性（仅限匿名聚合数据）。</li>
+      </ul>
+      <p>我们不会将您的数据用于广告投放、用户画像或运营应用所需范围以外的任何目的。</p>
+    </section>
+
+    <section id="z4">
+      <h2><span class="sec-num">04</span>第三方服务</h2>
+      <p>Nur App 集成了以下第三方服务。每项服务均有其自己的隐私政策，规定其处理您数据的方式。</p>
+      <table class="data-table">
+        <thead><tr><th>服务</th><th>提供方</th><th>共享数据</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Firebase 身份验证</strong></td><td>Google LLC</td><td>匿名会话令牌（访客）；账户凭据（已登录用户）</td></tr>
+          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>账户资料、问答分数、对战结果、已获积分</td></tr>
+          <tr><td><strong>华为账号套件（HMS）</strong></td><td>华为技术有限公司</td><td>华为 ID 开放标识符、显示名称、电子邮箱（如已授权）、头像链接</td></tr>
+          <tr><td><strong>AppGallery Connect</strong></td><td>华为技术有限公司</td><td>应用配置和崩溃报告</td></tr>
+        </tbody>
+      </table>
+      <p>Google 隐私政策：<a href="https://policies.google.com/privacy" style="color:var(--accent)">policies.google.com/privacy</a></p>
+      <p>华为隐私政策：<a href="https://consumer.huawei.com/cn/privacy/privacy-policy" style="color:var(--accent)">consumer.huawei.com/cn/privacy</a></p>
+    </section>
+
+    <section id="z5">
+      <h2><span class="sec-num">05</span>数据存储与安全</h2>
+      <p>您的账户资料和问答进度存储在 Google Cloud Firestore 中，采用行业标准的传输加密（TLS）和静态加密。应用偏好（召唤礼拜设置、语言）使用 Android DataStore 存储在您的设备本地，不会被传输。</p>
+      <p>位置坐标仅用于即时计算礼拜时间，不会传输到我们的服务器，也不会存储在您设备以外的任何地方。</p>
+      <p>我们采取合理的技术保障措施；但没有任何系统是完全安全的。如果您认为您的数据已被泄露，请立即联系我们。</p>
+    </section>
+
+    <section id="z6">
+      <h2><span class="sec-num">06</span>数据共享</h2>
+      <p>我们<strong>不</strong>出售、出租或交易您的个人信息。</p>
+      <p>我们仅在以下有限情况下共享数据：</p>
+      <ul>
+        <li><strong>服务提供商：</strong>如第4条所述，仅与 Firebase 和华为共享数据，且仅用于运营本应用。</li>
+        <li><strong>法律要求：</strong>如适用法律、法院命令要求，或为保护用户或公众的权利和安全所必需。</li>
+      </ul>
+    </section>
+
+    <section id="z7">
+      <h2><span class="sec-num">07</span>您的权利</h2>
+      <p>根据您所在国家或地区的法律，您可能享有以下权利：</p>
+      <ul>
+        <li><strong>查阅权</strong> — 请求获取我们持有的您的个人数据副本。</li>
+        <li><strong>更正权</strong> — 更新不准确或不完整的信息。</li>
+        <li><strong>删除权</strong> — 请求删除您的账户及相关数据。</li>
+        <li><strong>撤回同意权</strong> — 随时在设备设置中撤销位置权限。</li>
+        <li><strong>数据可携带权</strong> — 以结构化、机器可读的格式获取您的数据。</li>
+      </ul>
+      <p>如需行使上述任何权利，请通过第10条中的联系方式与我们联系。我们将在30天内回复。</p>
+      <div class="callout">如需删除账户数据：请先退出应用登录，然后通过以下电子邮件联系我们，并提供您的显示名称或账户邮箱。我们将在7个工作日内永久删除您的 Firestore 记录。</div>
+    </section>
+
+    <section id="z8">
+      <h2><span class="sec-num">08</span>儿童隐私</h2>
+      <p>Nur App 适用于16岁及以上的用户。我们不会故意收集16岁以下儿童的个人信息。如果您认为某儿童向我们提供了个人信息，请联系我们，我们将立即予以删除。</p>
+    </section>
+
+    <section id="z9">
+      <h2><span class="sec-num">09</span>政策变更</h2>
+      <p>我们可能会不时更新本隐私政策。当我们进行重大变更时，我们将更新本页顶部的"最后更新"日期。在变更生效后继续使用本应用即表示您接受更新后的政策。</p>
+    </section>
+
+    <section id="z10">
+      <h2><span class="sec-num">10</span>联系我们</h2>
+      <p>如果您对本隐私政策或您的个人数据有任何疑问、顾虑或请求，请通过以下方式联系我们：</p>
+      <div class="contact-card">
+        <strong>Nemodroid — Nur App 隐私事务</strong>
+        <span>电子邮件：<a href="mailto:support@nemodroid.com">support@nemodroid.com</a></span>
+        <span>开发者：Nemodroid</span>
+        <span>应用：Nur App（نور）— 伊斯兰伴侣</span>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Nemodroid. 保留所有权利。<br>
+      Nur App（نور）— 您的礼拜、古兰经与祈祷伴侣。
+    </footer>
+
+  </div><!-- /lang-zh -->
+
+</div><!-- /page -->
+
+<script>
+  function setLang(lang) {
+    document.body.classList.toggle('zh', lang === 'zh');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    localStorage.setItem('nur_pp_lang', lang);
+  }
+  // Restore saved language preference
+  const saved = localStorage.getItem('nur_pp_lang');
+  if (saved) setLang(saved);
+</script>
