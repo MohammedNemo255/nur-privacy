@@ -1,6 +1,8 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nur App Privacy Policy — Nemodroid</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap">
 
 <style>
   :root {
@@ -210,6 +212,23 @@
   body.zh .lang-en { display: none; }
   body.zh .lang-zh { display: block; }
   body.zh h2 { font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; }
+
+  /* ── Arabic (RTL) ── */
+  .lang-ar {
+    display: none; direction: rtl; text-align: right;
+    font-family: 'Tajawal', 'Noto Sans Arabic', 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.95;
+  }
+  body.ar .lang-en, body.ar .lang-zh { display: none; }
+  body.ar .lang-ar { display: block; }
+  .lang-ar h1, .lang-ar h2 { font-family: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif; }
+  .lang-ar h1 { font-weight: 700; }
+  .lang-ar .data-table th { text-align: right; text-transform: none; letter-spacing: 0; }
+  .lang-ar .hero-eyebrow, .lang-ar .toc-title { letter-spacing: 0; text-transform: none; }
+  .lang-ar ul, .lang-ar ol { padding-left: 0; padding-right: 22px; }
+  .lang-ar .dev-banner, .lang-ar .toc, .lang-ar .callout {
+    border-left: 1px solid var(--border); border-right: 3px solid var(--accent);
+  }
 </style>
 
 <!-- ── Top bar ── -->
@@ -217,10 +236,11 @@
   <div class="topbar-logo">ن</div>
   <span class="topbar-name">Nur App</span>
   <span class="topbar-sep">|</span>
-  <span class="topbar-doc">Privacy Policy · 隐私政策</span>
+  <span class="topbar-doc">Privacy Policy · 隐私政策 · سياسة الخصوصية</span>
   <div class="lang-toggle">
     <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
     <button class="lang-btn"        id="btn-zh" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn"        id="btn-ar" onclick="setLang('ar')">العربية</button>
   </div>
 </div>
 
@@ -543,16 +563,179 @@
 
   </div><!-- /lang-zh -->
 
+  <!-- ══════════════════════════════════════════════════ العربية ══ -->
+  <div class="lang-ar" lang="ar" dir="rtl">
+
+    <div class="dev-banner">
+      <div class="dev-banner-item"><strong>اسم التطبيق:</strong> نور (Nur App)</div>
+      <div class="dev-banner-item"><strong>المطوّر:</strong> Nemodroid</div>
+      <div class="dev-banner-item"><strong>التواصل:</strong> nemonegm@gmail.com</div>
+    </div>
+
+    <div class="hero">
+      <span class="hero-eyebrow">قانوني</span>
+      <h1>سياسة الخصوصية</h1>
+      <div class="hero-meta">
+        <span>تطبيق نور — Nur App</span>
+        <span>المطوّر: Nemodroid</span>
+        <span>تاريخ السريان: 2 سبتمبر 2025</span>
+        <span>آخر تحديث: 2 أكتوبر 2026</span>
+      </div>
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">المحتويات</div>
+      <ol>
+        <li><a href="#a1"><span class="toc-num">01</span>مقدمة</a></li>
+        <li><a href="#a2"><span class="toc-num">02</span>المعلومات التي نجمعها</a></li>
+        <li><a href="#a3"><span class="toc-num">03</span>كيف نستخدم معلوماتك</a></li>
+        <li><a href="#a4"><span class="toc-num">04</span>خدمات الأطراف الثالثة</a></li>
+        <li><a href="#a5"><span class="toc-num">05</span>تخزين البيانات وأمانها</a></li>
+        <li><a href="#a6"><span class="toc-num">06</span>مشاركة البيانات</a></li>
+        <li><a href="#a7"><span class="toc-num">07</span>حقوقك</a></li>
+        <li><a href="#a8"><span class="toc-num">08</span>خصوصية الأطفال</a></li>
+        <li><a href="#a9"><span class="toc-num">09</span>التغييرات على هذه السياسة</a></li>
+        <li><a href="#a10"><span class="toc-num">10</span>تواصل معنا</a></li>
+      </ol>
+    </div>
+
+    <section id="a1">
+      <h2><span class="sec-num">01</span>مقدمة</h2>
+      <p>تطبيق نور («نور» أو «نحن» أو «التطبيق») هو تطبيق إسلامي رفيق طوّرته <strong>Nemodroid</strong>. يوفّر مواقيت الصلاة، وقراءة القرآن الكريم، والأذكار، ومسابقات المعرفة الإسلامية، وعدّاد التسبيح، وميزات أخرى ذات صلة.</p>
+      <p>نور مجاني للتحميل والاستخدام. يعرض التطبيق، أو قد يعرض مستقبلًا، إعلانات تقدّمها Google AdMob (انظر القسمين 3 و4).</p>
+      <p>توضّح سياسة الخصوصية هذه المعلومات التي نجمعها عند استخدامك للتطبيق، وكيف نستخدمها، والخيارات المتاحة لك. باستخدامك لتطبيق نور فإنك توافق على الممارسات الموضّحة في هذه السياسة.</p>
+    </section>
+
+    <section id="a2">
+      <h2><span class="sec-num">02</span>المعلومات التي نجمعها</h2>
+      <table class="data-table">
+        <thead><tr><th>نوع البيانات</th><th>أمثلة</th><th>الغرض</th><th>هل هي مطلوبة؟</th></tr></thead>
+        <tbody>
+          <tr><td><strong>الموقع</strong></td><td>إحداثيات GPS</td><td>حساب مواقيت الصلاة واتجاه القبلة بدقة حسب موقعك</td><td>اختياري — يمكنك إدخال المدينة يدويًا</td></tr>
+          <tr><td><strong>معلومات الحساب</strong></td><td>الاسم المعروض، البريد الإلكتروني، رابط صورة الملف الشخصي</td><td>إنشاء حسابك وتعريفه للميزات الإلكترونية (مواجهات المسابقات)</td><td>اختياري — وضع الضيف لا يتطلب حسابًا</td></tr>
+          <tr><td><strong>معرّف الجهاز</strong></td><td>Android ID (لحسابات الضيف فقط)</td><td>الحفاظ على جلستك بين مرات تشغيل التطبيق دون حساب</td><td>يُستخدم تلقائيًا في وضع الضيف</td></tr>
+          <tr><td><strong>سجلات المواجهات الإلكترونية</strong></td><td>معرّف المستخدم، الاسم المعروض، إجابات ونتائج مواجهات المسابقات الإلكترونية</td><td>تشغيل مواجهات المسابقات الإلكترونية بين اللاعبين</td><td>فقط عند لعب المواجهات الإلكترونية</td></tr>
+          <tr><td><strong>بيانات الإعلانات</strong></td><td>معرّف الإعلانات، عنوان IP، معلومات الجهاز والتطبيق</td><td>عرض الإعلانات وقياس أدائها (تجمعها Google AdMob عند عرض الإعلانات)</td><td>فقط عند عرض الإعلانات — يمكنك إعادة ضبط معرّف الإعلانات أو إيقاف الإعلانات المخصّصة من إعدادات جهازك</td></tr>
+          <tr><td><strong>البيانات على جهازك</strong></td><td>النقاط، تقدّم المسابقات، جلسات التسبيح، المفضّلة، نوع الأذان، دقائق التذكير، تفضيل اللغة</td><td>عرض تقدّمك وتذكّر تفضيلاتك</td><td>تُخزَّن على جهازك فقط — ولا تُرسَل إلينا</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">نحن <strong>لا</strong> نجمع معلومات الدفع، ولا بيانات صحية دقيقة، ولا جهات الاتصال، ولا الصور، ولا الكاميرا، ولا الميكروفون، ولا أي بيانات لا علاقة لها بالميزات المذكورة أعلاه.</div>
+    </section>
+
+    <section id="a3">
+      <h2><span class="sec-num">03</span>كيف نستخدم معلوماتك</h2>
+      <ul>
+        <li>تقديم ميزات التطبيق الأساسية وتحسينها (مواقيت الصلاة، قارئ القرآن، مواجهات المسابقات).</li>
+        <li>تعريف حسابك عبر الجلسات والأجهزة.</li>
+        <li>عرض نقاط المسابقات والمستوى وسجل المواجهات داخل التطبيق.</li>
+        <li>إرسال إشعارات محلية لمواقيت الصلاة والتذكيرات — ولا نرسل رسائل تسويقية.</li>
+        <li>عرض الإعلانات وقياس أدائها (عبر Google AdMob).</li>
+      </ul>
+      <p>نحن لا نبيع بياناتك الشخصية ولا نستخدمها لبناء ملفات تعريفية. وباستثناء الإعلانات الموضّحة أعلاه، لا نستخدم بياناتك لأي غرض يتجاوز ما يلزم لتشغيل التطبيق.</p>
+    </section>
+
+    <section id="a4">
+      <h2><span class="sec-num">04</span>خدمات الأطراف الثالثة</h2>
+      <p>يتكامل تطبيق نور مع خدمات الأطراف الثالثة التالية. لكل خدمة سياسة خصوصية خاصة بها تنظّم طريقة تعاملها مع بياناتك.</p>
+      <table class="data-table">
+        <thead><tr><th>الخدمة</th><th>المزوّد</th><th>البيانات المشاركة</th></tr></thead>
+        <tbody>
+          <tr><td><strong>مصادقة Firebase</strong></td><td>Google LLC</td><td>رمز جلسة مجهول (للضيف)؛ بيانات الحساب (للمستخدمين المسجّلين)</td></tr>
+          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>سجلات المواجهات الإلكترونية (معرّف المستخدم، الاسم المعروض، الإجابات، النتائج)</td></tr>
+          <tr><td><strong>Huawei Account Kit (HMS)</strong></td><td>Huawei Technologies Co., Ltd.</td><td>المعرّف المفتوح لحساب Huawei، الاسم المعروض، البريد الإلكتروني (إن مُنح الإذن)، رابط صورة الملف الشخصي</td></tr>
+          <tr><td><strong>AppGallery Connect</strong></td><td>Huawei Technologies Co., Ltd.</td><td>إعدادات التطبيق</td></tr>
+          <tr><td><strong>Google AdMob</strong></td><td>Google LLC</td><td>معرّف الإعلانات، عنوان IP، معلومات الجهاز والتطبيق (عند عرض الإعلانات فقط)</td></tr>
+        </tbody>
+      </table>
+      <p>سياسة خصوصية Google: <a href="https://policies.google.com/privacy" style="color:var(--accent)">policies.google.com/privacy</a></p>
+      <p>كيف تستخدم Google البيانات من التطبيقات التي تستعمل خدماتها: <a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">policies.google.com/technologies/partner-sites</a></p>
+      <p><strong>خيارات الإعلانات:</strong> يمكنك في أي وقت إعادة ضبط معرّف الإعلانات أو إيقاف الإعلانات المخصّصة من إعدادات جهازك (Google ← الإعلانات). وحيثما يتطلب القانون ذلك (مثل المنطقة الاقتصادية الأوروبية والمملكة المتحدة) نطلب موافقتك قبل عرض الإعلانات المخصّصة.</p>
+      <p>سياسة خصوصية Huawei: <a href="https://consumer.huawei.com/en/privacy/privacy-policy" style="color:var(--accent)">consumer.huawei.com/en/privacy</a></p>
+    </section>
+
+    <section id="a5">
+      <h2><span class="sec-num">05</span>تخزين البيانات وأمانها</h2>
+      <p>يحتفظ بحساب تسجيل دخولك خدمة مصادقة Firebase، وتُخزَّن سجلات مواجهاتك الإلكترونية في Google Cloud Firestore مع تشفير قياسي أثناء النقل (TLS) وعند التخزين. أما نقاطك وتقدّمك في المسابقات وتفضيلات التطبيق (إعدادات الأذان، اللغة) فتُخزَّن محليًا على جهازك باستخدام Android DataStore ولا تُرسَل أبدًا.</p>
+      <p>تُستخدم إحداثيات الموقع لحظيًا لحساب مواقيت الصلاة، ولا تُرسَل إلى خوادمنا ولا تُخزَّن خارج جهازك.</p>
+      <p>نطبّق إجراءات حماية تقنية معقولة، إلا أنه لا يوجد نظام آمن بالكامل. إذا كنت تعتقد أن بياناتك تعرّضت للاختراق فيُرجى التواصل معنا فورًا.</p>
+    </section>
+
+    <section id="a6">
+      <h2><span class="sec-num">06</span>مشاركة البيانات</h2>
+      <p>نحن <strong>لا</strong> نبيع معلوماتك الشخصية ولا نؤجّرها ولا نتاجر بها.</p>
+      <p>نشارك البيانات في الحالات المحدودة التالية فقط:</p>
+      <ul>
+        <li><strong>مزوّدو الخدمة:</strong> Firebase وHuawei وGoogle AdMob كما هو موضّح في القسم 4، حصرًا لتشغيل التطبيق وعرض الإعلانات.</li>
+        <li><strong>المتطلبات القانونية:</strong> إذا اقتضى القانون المعمول به أو أمر قضائي ذلك، أو لحماية حقوق المستخدمين أو الجمهور وسلامتهم.</li>
+      </ul>
+    </section>
+
+    <section id="a7">
+      <h2><span class="sec-num">07</span>حقوقك</h2>
+      <p>بحسب بلد إقامتك، قد يكون من حقك:</p>
+      <ul>
+        <li><strong>الاطلاع</strong> — طلب نسخة من البيانات الشخصية التي نحتفظ بها عنك.</li>
+        <li><strong>التصحيح</strong> — تحديث المعلومات غير الدقيقة أو الناقصة.</li>
+        <li><strong>الحذف</strong> — طلب حذف حسابك والبيانات المرتبطة به.</li>
+        <li><strong>سحب الموافقة</strong> — إلغاء إذن الموقع في أي وقت من إعدادات جهازك.</li>
+        <li><strong>قابلية النقل</strong> — الحصول على بياناتك بصيغة منظّمة مقروءة آليًا.</li>
+      </ul>
+      <p>لممارسة أي من هذه الحقوق تواصل معنا عبر البيانات الواردة في القسم 10. وسنردّ خلال 30 يومًا.</p>
+      <div class="callout" id="delete-account-ar" style="scroll-margin-top:72px">
+        <strong>كيف تحذف حسابك وبياناتك (تطبيق نور من Nemodroid)</strong>
+        <ol style="margin-top:8px">
+          <li><strong>من داخل التطبيق (فوري):</strong> افتح الإعدادات ← «حذف الحساب والبيانات» ثم أكّد.</li>
+          <li><strong>عبر البريد الإلكتروني:</strong> إذا لم تعد قادرًا على فتح التطبيق، راسلنا على <a href="mailto:nemonegm@gmail.com?subject=Delete%20my%20Nur%20App%20account" style="color:var(--accent)">nemonegm@gmail.com</a> بعنوان "Delete my Nur App account" مع اسمك المعروض أو بريد تسجيل الدخول. سنؤكد الطلب ونحذف بياناتك خلال 7 أيام عمل.</li>
+        </ol>
+        <p><strong>البيانات المحذوفة:</strong> حساب تسجيل الدخول لدى مصادقة Firebase (الاسم المعروض، البريد الإلكتروني، رابط صورة الملف الشخصي، معرّف المستخدم)، وسجلات مواجهاتك الإلكترونية في Cloud Firestore (معرّف المستخدم، الاسم المعروض، الإجابات)، وكل ما هو مخزَّن على جهازك (النقاط، التقدّم، المفضّلة). <strong>البيانات المحتفَظ بها:</strong> لا شيء، إلا ما يُلزمنا القانون بالاحتفاظ به.</p>
+      </div>
+    </section>
+
+    <section id="a8">
+      <h2><span class="sec-num">08</span>خصوصية الأطفال</h2>
+      <p>الميزات المرتبطة بالحساب في تطبيق نور (تسجيل الدخول، مواجهات المسابقات الإلكترونية، النقاط ولوحات الصدارة) مخصّصة للمستخدمين من عمر 16 عامًا فأكثر. ويتضمن التطبيق أيضًا «ركن الأطفال» الذي يقدّم محتوى إسلاميًا تعليميًا (تعلّم الصلاة، الوضوء، الحروف العربية) مخصّصًا للاستخدام بمرافقة أحد الوالدين أو ولي الأمر، ولا يتطلب حسابًا. ولا تُعرض أي إعلانات داخل ركن الأطفال.</p>
+      <p>نحن لا نجمع عن علم معلومات شخصية من الأطفال دون 16 عامًا. إذا كنت تعتقد أن طفلًا قدّم لنا معلومات شخصية فيُرجى التواصل معنا وسنحذفها فورًا.</p>
+    </section>
+
+    <section id="a9">
+      <h2><span class="sec-num">09</span>التغييرات على هذه السياسة</h2>
+      <p>قد نحدّث سياسة الخصوصية هذه من وقت لآخر. وعند إجراء تغييرات جوهرية سنحدّث تاريخ «آخر تحديث» أعلى هذه الصفحة. ويُعدّ استمرارك في استخدام التطبيق بعد سريان التغييرات قبولًا للسياسة المحدّثة.</p>
+    </section>
+
+    <section id="a10">
+      <h2><span class="sec-num">10</span>تواصل معنا</h2>
+      <p>إذا كانت لديك أسئلة أو مخاوف أو طلبات بخصوص سياسة الخصوصية هذه أو بياناتك الشخصية، فيُرجى التواصل معنا:</p>
+      <div class="contact-card">
+        <strong>Nemodroid — خصوصية تطبيق نور</strong>
+        <span>البريد الإلكتروني: <a href="mailto:nemonegm@gmail.com">nemonegm@gmail.com</a></span>
+        <span>المطوّر: Nemodroid</span>
+        <span>التطبيق: نور (Nur App) — رفيقك الإسلامي</span>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025–2026 Nemodroid. جميع الحقوق محفوظة.<br>
+      نور (Nur App) — رفيقك في الصلاة والقرآن والذكر.
+    </footer>
+
+  </div><!-- /lang-ar -->
+
+
 </div><!-- /page -->
 
 <script>
   function setLang(lang) {
     document.body.classList.toggle('zh', lang === 'zh');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
-    localStorage.setItem('nur_pp_lang', lang);
+    document.body.classList.toggle('ar', lang === 'ar');
+    document.documentElement.lang = lang;
+    ['en', 'zh', 'ar'].forEach(function (l) {
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+    });
+    try { localStorage.setItem('nur_pp_lang', lang); } catch (e) {}
   }
-  // Restore saved language preference
-  const saved = localStorage.getItem('nur_pp_lang');
-  if (saved) setLang(saved);
+  // Restore saved language; first-time Arabic browsers get the Arabic version
+  var saved = null;
+  try { saved = localStorage.getItem('nur_pp_lang'); } catch (e) {}
+  var nav = (navigator.language || '').toLowerCase();
+  setLang(saved || (nav.indexOf('ar') === 0 ? 'ar' : 'en'));
 </script>
