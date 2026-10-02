@@ -233,7 +233,7 @@
     <div class="dev-banner">
       <div class="dev-banner-item"><strong>App Name:</strong> Nur App (نور)</div>
       <div class="dev-banner-item"><strong>Developer:</strong> Nemodroid</div>
-      <div class="dev-banner-item"><strong>Contact:</strong> support@nemodroid.com</div>
+      <div class="dev-banner-item"><strong>Contact:</strong> nemonegm@gmail.com</div>
     </div>
 
     <div class="hero">
@@ -243,7 +243,7 @@
         <span>Nur App — نور</span>
         <span>Developer: Nemodroid</span>
         <span>Effective: September 2, 2025</span>
-        <span>Last updated: September 2, 2025</span>
+        <span>Last updated: October 2, 2026</span>
       </div>
     </div>
 
@@ -266,6 +266,7 @@
     <section id="s1">
       <h2><span class="sec-num">01</span>Introduction</h2>
       <p>Nur App ("نور", "we", "our", or "the App") is an Islamic companion application developed by <strong>Nemodroid</strong>. It provides prayer times, Holy Quran reading, Adhkar, Islamic knowledge quizzes, Tasbih counter, and related features.</p>
+      <p>Nur App is free to download and use. The App displays, or may in the future display, advertisements served by Google AdMob (see Sections 3 and 4).</p>
       <p>This Privacy Policy explains what information we collect when you use the App, how we use it, and the choices you have. By using Nur App, you agree to the practices described in this policy.</p>
     </section>
 
@@ -277,8 +278,9 @@
           <tr><td><strong>Location</strong></td><td>GPS coordinates</td><td>Calculate accurate prayer times and Qibla direction for your position</td><td>Optional — you can enter a city manually</td></tr>
           <tr><td><strong>Account Info</strong></td><td>Display name, email address, profile photo URL</td><td>Create and identify your account for online features (quiz battles, points)</td><td>Optional — Guest mode requires no account</td></tr>
           <tr><td><strong>Device Identifier</strong></td><td>Android ID (for Guest accounts only)</td><td>Persist your session and points across app restarts without an account</td><td>Automatically used in Guest mode</td></tr>
-          <tr><td><strong>Usage Data</strong></td><td>Quiz scores, battle results, earned points, prayer preferences, Tasbih sessions</td><td>Power in-app features, display your progress, enable leaderboard participation</td><td>Yes — core to app functionality</td></tr>
-          <tr><td><strong>App Settings</strong></td><td>Azan type, reminder minutes, language preference</td><td>Remember your preferences between sessions</td><td>Yes — stored locally on device</td></tr>
+          <tr><td><strong>Online Battle Records</strong></td><td>User ID, display name, answers and results of online quiz battles</td><td>Run online quiz battles between players</td><td>Only if you play online battles</td></tr>
+          <tr><td><strong>Advertising Data</strong></td><td>Advertising ID, IP address, device and app information</td><td>Show ads and measure ad performance (collected by Google AdMob when ads are displayed)</td><td>Only when ads are shown — you can reset your advertising ID or opt out of personalised ads in your device settings</td></tr>
+          <tr><td><strong>On-device Data</strong></td><td>Points, quiz progress, Tasbih sessions, favourites, Azan type, reminder minutes, language preference</td><td>Show your progress and remember your preferences</td><td>Stored only on your device — never sent to us</td></tr>
         </tbody>
       </table>
       <div class="callout">We do <strong>not</strong> collect payment information, precise health data, contacts, photos, camera, microphone, or any data unrelated to the features listed above.</div>
@@ -291,9 +293,9 @@
         <li>Identify your account across sessions and devices.</li>
         <li>Display your quiz points, level, and battle history inside the App.</li>
         <li>Send local notifications for prayer times and reminders — we do not send marketing messages.</li>
-        <li>Diagnose crashes and improve stability (anonymous, aggregated only).</li>
+        <li>Show advertisements and measure their performance (through Google AdMob).</li>
       </ul>
-      <p>We do not use your data for advertising, profiling, or any purpose beyond what is needed to operate the App.</p>
+      <p>We do not sell your personal data and do not use it for profiling. Apart from the advertising described above, we do not use your data for any purpose beyond what is needed to operate the App.</p>
     </section>
 
     <section id="s4">
@@ -303,18 +305,21 @@
         <thead><tr><th>Service</th><th>Provider</th><th>Data Shared</th></tr></thead>
         <tbody>
           <tr><td><strong>Firebase Authentication</strong></td><td>Google LLC</td><td>Anonymous session token (Guest); account credentials (signed-in users)</td></tr>
-          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>Account profile, quiz scores, battle results, earned points</td></tr>
+          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>Online battle records (user ID, display name, answers, results)</td></tr>
           <tr><td><strong>Huawei Account Kit (HMS)</strong></td><td>Huawei Technologies Co., Ltd.</td><td>Huawei ID open identifier, display name, email (if granted), profile photo URL</td></tr>
-          <tr><td><strong>AppGallery Connect</strong></td><td>Huawei Technologies Co., Ltd.</td><td>App configuration and crash reporting</td></tr>
+          <tr><td><strong>AppGallery Connect</strong></td><td>Huawei Technologies Co., Ltd.</td><td>App configuration</td></tr>
+          <tr><td><strong>Google AdMob</strong></td><td>Google LLC</td><td>Advertising ID, IP address, device and app information (only when ads are displayed)</td></tr>
         </tbody>
       </table>
       <p>Google's privacy policy: <a href="https://policies.google.com/privacy" style="color:var(--accent)">policies.google.com/privacy</a></p>
+      <p>How Google uses data from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">policies.google.com/technologies/partner-sites</a></p>
+      <p><strong>Ad choices:</strong> you can reset your advertising ID or opt out of personalised ads at any time in your device Settings (Google → Ads). Where required by law (for example in the EEA and the UK), we ask for your consent before showing personalised ads.</p>
       <p>Huawei's privacy policy: <a href="https://consumer.huawei.com/en/privacy/privacy-policy" style="color:var(--accent)">consumer.huawei.com/en/privacy</a></p>
     </section>
 
     <section id="s5">
       <h2><span class="sec-num">05</span>Data Storage &amp; Security</h2>
-      <p>Your account profile and quiz progress are stored in Google Cloud Firestore with industry-standard encryption in transit (TLS) and at rest. App preferences (Azan settings, language) are stored locally on your device using Android DataStore and are never transmitted.</p>
+      <p>Your sign-in account is held by Firebase Authentication and your online battle records are stored in Google Cloud Firestore, with industry-standard encryption in transit (TLS) and at rest. Your points, quiz progress and app preferences (Azan settings, language) are stored locally on your device using Android DataStore and are never transmitted.</p>
       <p>Location coordinates are used momentarily to compute prayer times and are not transmitted to our servers or stored anywhere outside your device.</p>
       <p>We implement reasonable technical safeguards; however, no system is completely secure. If you believe your data has been compromised, please contact us immediately.</p>
     </section>
@@ -324,7 +329,7 @@
       <p>We do <strong>not</strong> sell, rent, or trade your personal information.</p>
       <p>We share data only in the following limited cases:</p>
       <ul>
-        <li><strong>Service providers:</strong> Firebase and Huawei as described in Section 4, solely to operate the App.</li>
+        <li><strong>Service providers:</strong> Firebase, Huawei and Google AdMob as described in Section 4, solely to operate the App and show ads.</li>
         <li><strong>Legal requirements:</strong> If required by applicable law, court order, or to protect the rights and safety of users or the public.</li>
       </ul>
     </section>
@@ -340,12 +345,20 @@
         <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
       </ul>
       <p>To exercise any of these rights, contact us using the details in Section 10. We will respond within 30 days.</p>
-      <div class="callout">To delete your account data: log out of the App, then contact us at the email below with your display name or account email. We will permanently remove your Firestore records within 7 business days.</div>
+      <div class="callout" id="delete-account" style="scroll-margin-top:72px">
+        <strong>How to delete your account and data (Nur App by Nemodroid)</strong>
+        <ol style="margin-top:8px">
+          <li><strong>In the app (instant):</strong> open Settings → <em>Delete account &amp; data</em> and confirm.</li>
+          <li><strong>By email:</strong> if you can no longer open the App, write to <a href="mailto:nemonegm@gmail.com?subject=Delete%20my%20Nur%20App%20account" style="color:var(--accent)">nemonegm@gmail.com</a> with the subject "Delete my Nur App account" and your display name or sign-in email. We will confirm and delete your data within 7 business days.</li>
+        </ol>
+        <p><strong>Data deleted:</strong> your sign-in account held by Firebase Authentication (display name, email address, profile photo URL, user ID), your online battle records in Cloud Firestore (user ID, display name, answers), and everything stored on your device (points, progress, favourites). <strong>Data kept:</strong> none, except where the law requires us to keep it.</p>
+      </div>
     </section>
 
     <section id="s8">
       <h2><span class="sec-num">08</span>Children's Privacy</h2>
-      <p>Nur App is rated for users aged 16 and above. We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+      <p>The account-based features of Nur App (sign-in, online quiz battles, points and leaderboards) are intended for users aged 16 and above. The App also contains a "Kids Corner" with educational Islamic content (learning to pray, wudu, Arabic letters) that is meant to be used together with a parent or guardian and does not require an account. No advertising is shown in Kids Corner.</p>
+      <p>We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
     </section>
 
     <section id="s9">
@@ -358,14 +371,14 @@
       <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out:</p>
       <div class="contact-card">
         <strong>Nemodroid — Nur App Privacy</strong>
-        <span>Email: <a href="mailto:support@nemodroid.com">support@nemodroid.com</a></span>
+        <span>Email: <a href="mailto:nemonegm@gmail.com">nemonegm@gmail.com</a></span>
         <span>Developer: Nemodroid</span>
         <span>App: Nur App (نور) — Islamic Companion</span>
       </div>
     </section>
 
     <footer>
-      &copy; 2025 Nemodroid. All rights reserved.<br>
+      &copy; 2025–2026 Nemodroid. All rights reserved.<br>
       Nur App (نور) — Your companion for prayer, Quran &amp; remembrance.
     </footer>
 
@@ -379,7 +392,7 @@
     <div class="dev-banner">
       <div class="dev-banner-item"><strong>应用名称：</strong>Nur App（نور）</div>
       <div class="dev-banner-item"><strong>开发者：</strong>Nemodroid</div>
-      <div class="dev-banner-item"><strong>联系方式：</strong>support@nemodroid.com</div>
+      <div class="dev-banner-item"><strong>联系方式：</strong>nemonegm@gmail.com</div>
     </div>
 
     <div class="hero">
@@ -389,7 +402,7 @@
         <span>Nur App — نور</span>
         <span>开发者：Nemodroid</span>
         <span>生效日期：2025年9月2日</span>
-        <span>最后更新：2025年9月2日</span>
+        <span>最后更新：2026年10月2日</span>
       </div>
     </div>
 
@@ -412,6 +425,7 @@
     <section id="z1">
       <h2><span class="sec-num">01</span>简介</h2>
       <p>Nur App（"نور"，以下简称"本应用"、"我们"）是由 <strong>Nemodroid</strong> 开发的伊斯兰伴侣应用程序，提供礼拜时间查询、神圣古兰经阅读、赞词（Adhkar）、伊斯兰知识问答、念珠计数器等功能。</p>
+      <p>Nur App 可免费下载和使用。本应用目前或未来可能展示由 Google AdMob 提供的广告（见第3条和第4条）。</p>
       <p>本隐私政策说明了您在使用本应用时我们收集哪些信息、如何使用这些信息以及您的选择权利。使用 Nur App 即表示您同意本政策所述的相关做法。</p>
     </section>
 
@@ -423,8 +437,9 @@
           <tr><td><strong>位置信息</strong></td><td>GPS 坐标</td><td>计算您所在位置的准确礼拜时间和朝拜方向（基卜拉）</td><td>可选 — 您也可以手动输入城市名称</td></tr>
           <tr><td><strong>账户信息</strong></td><td>显示名称、电子邮箱、头像链接</td><td>为在线功能（知识对战、积分排行）创建并识别您的账户</td><td>可选 — 访客模式无需注册账户</td></tr>
           <tr><td><strong>设备标识符</strong></td><td>Android ID（仅限访客账户）</td><td>在无需账户的情况下跨会话保存您的进度和积分</td><td>访客模式下自动使用</td></tr>
-          <tr><td><strong>使用数据</strong></td><td>问答分数、对战结果、积分、礼拜偏好、念珠记录</td><td>支持应用功能、显示进度、参与排行榜</td><td>是 — 核心功能所需</td></tr>
-          <tr><td><strong>应用设置</strong></td><td>召唤礼拜类型、提醒时间、语言偏好</td><td>在会话之间保存您的偏好设置</td><td>是 — 仅存储在本地设备</td></tr>
+          <tr><td><strong>在线对战记录</strong></td><td>用户 ID、显示名称、在线知识对战的答题和结果</td><td>在玩家之间进行在线知识对战</td><td>仅在您玩在线对战时</td></tr>
+          <tr><td><strong>广告数据</strong></td><td>广告标识符、IP 地址、设备和应用信息</td><td>展示广告并衡量广告效果（展示广告时由 Google AdMob 收集）</td><td>仅在展示广告时 — 您可以在设备设置中重置广告标识符或关闭个性化广告</td></tr>
+          <tr><td><strong>设备本地数据</strong></td><td>积分、问答进度、念珠记录、收藏、召唤礼拜类型、提醒时间、语言偏好</td><td>显示您的进度并保存您的偏好设置</td><td>仅存储在您的设备上 — 不会发送给我们</td></tr>
         </tbody>
       </table>
       <div class="callout">我们<strong>不</strong>收集支付信息、精确健康数据、通讯录、照片、摄像头、麦克风，或与上述功能无关的任何数据。</div>
@@ -437,9 +452,9 @@
         <li>在不同会话和设备之间识别您的账户。</li>
         <li>在应用内显示您的问答积分、等级和对战历史。</li>
         <li>发送礼拜时间和提醒的本地通知 — 我们不发送营销信息。</li>
-        <li>诊断崩溃并提高稳定性（仅限匿名聚合数据）。</li>
+        <li>展示广告并衡量广告效果（通过 Google AdMob）。</li>
       </ul>
-      <p>我们不会将您的数据用于广告投放、用户画像或运营应用所需范围以外的任何目的。</p>
+      <p>我们不会出售您的个人数据，也不会将其用于用户画像。除上述广告用途外，我们不会将您的数据用于运营应用所需范围以外的任何目的。</p>
     </section>
 
     <section id="z4">
@@ -449,18 +464,21 @@
         <thead><tr><th>服务</th><th>提供方</th><th>共享数据</th></tr></thead>
         <tbody>
           <tr><td><strong>Firebase 身份验证</strong></td><td>Google LLC</td><td>匿名会话令牌（访客）；账户凭据（已登录用户）</td></tr>
-          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>账户资料、问答分数、对战结果、已获积分</td></tr>
+          <tr><td><strong>Cloud Firestore</strong></td><td>Google LLC</td><td>在线对战记录（用户 ID、显示名称、答题、结果）</td></tr>
           <tr><td><strong>华为账号套件（HMS）</strong></td><td>华为技术有限公司</td><td>华为 ID 开放标识符、显示名称、电子邮箱（如已授权）、头像链接</td></tr>
-          <tr><td><strong>AppGallery Connect</strong></td><td>华为技术有限公司</td><td>应用配置和崩溃报告</td></tr>
+          <tr><td><strong>AppGallery Connect</strong></td><td>华为技术有限公司</td><td>应用配置</td></tr>
+          <tr><td><strong>Google AdMob</strong></td><td>Google LLC</td><td>广告标识符、IP 地址、设备和应用信息（仅在展示广告时）</td></tr>
         </tbody>
       </table>
       <p>Google 隐私政策：<a href="https://policies.google.com/privacy" style="color:var(--accent)">policies.google.com/privacy</a></p>
+      <p>Google 如何使用使用其服务的应用中的数据：<a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">policies.google.com/technologies/partner-sites</a></p>
+      <p><strong>广告选择：</strong>您可以随时在设备设置（Google → 广告）中重置广告标识符或关闭个性化广告。在法律要求的地区（例如欧洲经济区和英国），我们会在展示个性化广告前征求您的同意。</p>
       <p>华为隐私政策：<a href="https://consumer.huawei.com/cn/privacy/privacy-policy" style="color:var(--accent)">consumer.huawei.com/cn/privacy</a></p>
     </section>
 
     <section id="z5">
       <h2><span class="sec-num">05</span>数据存储与安全</h2>
-      <p>您的账户资料和问答进度存储在 Google Cloud Firestore 中，采用行业标准的传输加密（TLS）和静态加密。应用偏好（召唤礼拜设置、语言）使用 Android DataStore 存储在您的设备本地，不会被传输。</p>
+      <p>您的登录账户由 Firebase 身份验证保管，您的在线对战记录存储在 Google Cloud Firestore 中，采用行业标准的传输加密（TLS）和静态加密。您的积分、问答进度和应用偏好（召唤礼拜设置、语言）使用 Android DataStore 存储在您的设备本地，不会被传输。</p>
       <p>位置坐标仅用于即时计算礼拜时间，不会传输到我们的服务器，也不会存储在您设备以外的任何地方。</p>
       <p>我们采取合理的技术保障措施；但没有任何系统是完全安全的。如果您认为您的数据已被泄露，请立即联系我们。</p>
     </section>
@@ -470,7 +488,7 @@
       <p>我们<strong>不</strong>出售、出租或交易您的个人信息。</p>
       <p>我们仅在以下有限情况下共享数据：</p>
       <ul>
-        <li><strong>服务提供商：</strong>如第4条所述，仅与 Firebase 和华为共享数据，且仅用于运营本应用。</li>
+        <li><strong>服务提供商：</strong>如第4条所述，仅与 Firebase、华为和 Google AdMob 共享数据，且仅用于运营本应用和展示广告。</li>
         <li><strong>法律要求：</strong>如适用法律、法院命令要求，或为保护用户或公众的权利和安全所必需。</li>
       </ul>
     </section>
@@ -486,12 +504,20 @@
         <li><strong>数据可携带权</strong> — 以结构化、机器可读的格式获取您的数据。</li>
       </ul>
       <p>如需行使上述任何权利，请通过第10条中的联系方式与我们联系。我们将在30天内回复。</p>
-      <div class="callout">如需删除账户数据：请先退出应用登录，然后通过以下电子邮件联系我们，并提供您的显示名称或账户邮箱。我们将在7个工作日内永久删除您的 Firestore 记录。</div>
+      <div class="callout" id="delete-account-zh" style="scroll-margin-top:72px">
+        <strong>如何删除您的账户和数据（Nemodroid 开发的 Nur App）</strong>
+        <ol style="margin-top:8px">
+          <li><strong>在应用内（立即生效）：</strong>打开“设置”→“删除账户和数据”并确认。</li>
+          <li><strong>通过电子邮件：</strong>如果您无法再打开应用，请发送邮件至 <a href="mailto:nemonegm@gmail.com?subject=Delete%20my%20Nur%20App%20account" style="color:var(--accent)">nemonegm@gmail.com</a>，主题为"Delete my Nur App account"，并提供您的显示名称或登录邮箱。我们将确认请求并在7个工作日内删除您的数据。</li>
+        </ol>
+        <p><strong>将被删除的数据：</strong>Firebase 身份验证中的登录账户（显示名称、电子邮箱、头像链接、用户 ID）、Cloud Firestore 中的在线对战记录（用户 ID、显示名称、答题），以及存储在您设备上的所有数据（积分、进度、收藏）。<strong>保留的数据：</strong>无，法律要求保留的除外。</p>
+      </div>
     </section>
 
     <section id="z8">
       <h2><span class="sec-num">08</span>儿童隐私</h2>
-      <p>Nur App 适用于16岁及以上的用户。我们不会故意收集16岁以下儿童的个人信息。如果您认为某儿童向我们提供了个人信息，请联系我们，我们将立即予以删除。</p>
+      <p>Nur App 的账户相关功能（登录、在线知识对战、积分和排行榜）适用于16岁及以上的用户。本应用还包含"儿童角落"，提供教育性的伊斯兰内容（学习礼拜、小净、阿拉伯字母），应在家长或监护人陈伴下使用，且无需账户。儿童角落内不展示广告。</p>
+      <p>我们不会故意收集16岁以下儿童的个人信息。如果您认为某儿童向我们提供了个人信息，请联系我们，我们将立即予以删除。</p>
     </section>
 
     <section id="z9">
@@ -504,14 +530,14 @@
       <p>如果您对本隐私政策或您的个人数据有任何疑问、顾虑或请求，请通过以下方式联系我们：</p>
       <div class="contact-card">
         <strong>Nemodroid — Nur App 隐私事务</strong>
-        <span>电子邮件：<a href="mailto:support@nemodroid.com">support@nemodroid.com</a></span>
+        <span>电子邮件：<a href="mailto:nemonegm@gmail.com">nemonegm@gmail.com</a></span>
         <span>开发者：Nemodroid</span>
         <span>应用：Nur App（نور）— 伊斯兰伴侣</span>
       </div>
     </section>
 
     <footer>
-      &copy; 2025 Nemodroid. 保留所有权利。<br>
+      &copy; 2025–2026 Nemodroid. 保留所有权利。<br>
       Nur App（نور）— 您的礼拜、古兰经与祈祷伴侣。
     </footer>
 
