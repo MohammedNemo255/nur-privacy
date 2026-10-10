@@ -263,7 +263,7 @@
         <span>Nur App — نور</span>
         <span>Developer: Nemodroid</span>
         <span>Effective: September 2, 2025</span>
-        <span>Last updated: October 7, 2026</span>
+        <span>Last updated: October 10, 2026</span>
       </div>
     </div>
 
@@ -297,11 +297,11 @@
         <tbody>
           <tr><td><strong>Location</strong></td><td>GPS coordinates</td><td>Calculate accurate prayer times and Qibla direction for your position</td><td>Optional — you can enter a city manually</td></tr>
           <tr><td><strong>Account Info</strong></td><td>Display name, email address, profile photo URL</td><td>Create and identify your account for online features (quiz battles, points)</td><td>Optional — Guest mode requires no account</td></tr>
-          <tr><td><strong>Device Identifier</strong></td><td>Android ID (for Guest accounts only)</td><td>Persist your session and points across app restarts without an account</td><td>Automatically used in Guest mode</td></tr>
-          <tr><td><strong>Online Battle Records</strong></td><td>User ID, display name, answers and results of online quiz battles</td><td>Run online quiz battles between players</td><td>Only if you play online battles</td></tr>
+          <tr><td><strong>Guest Identifier</strong></td><td>A random guest ID created on your device (Guest accounts only)</td><td>Persist your session and points across app restarts without an account</td><td>Automatically used in Guest mode</td></tr>
+          <tr><td><strong>Online Battle Records</strong></td><td>User ID, display name, answers and results of online quiz battles</td><td>Run online quiz battles between players</td><td>Only if you play online battles. Battle rooms are temporary and are deleted when the battle ends or expires</td></tr>
           <tr><td><strong>Technical Diagnostics</strong></td><td>Service diagnostics and device/app information</td><td>Keep sign-in, database and location services working (collected automatically by Firebase, Google Play Services and Huawei Mobile Services)</td><td>Automatic — handled by those services</td></tr>
           <tr><td><strong>Advertising Data</strong></td><td>Advertising ID, IP address and the approximate location derived from it, device and app information, ad interactions, crash and performance diagnostics</td><td>Show ads and measure ad performance (collected by Google AdMob when ads are displayed)</td><td>Only when ads are shown — you can reset your advertising ID or opt out of personalised ads in your device settings</td></tr>
-          <tr><td><strong>On-device Data</strong></td><td>Points, quiz progress, Tasbih sessions, favourites, Azan type, reminder minutes, language preference</td><td>Show your progress and remember your preferences</td><td>Stored only on your device — never sent to us</td></tr>
+          <tr><td><strong>On-device Data</strong></td><td>Points, quiz progress, Tasbih sessions, favourites, Quran bookmarks and your notes, reading position, daily wird goal and progress, Azan type, reminder settings (including Islamic occasion reminders), language preference</td><td>Show your progress and remember your preferences</td><td>Stored only on your device — never sent to us (Quran search also runs entirely on your device)</td></tr>
         </tbody>
       </table>
       <div class="callout">We do <strong>not</strong> collect payment information, precise health data, contacts, photos, camera, microphone, or any data unrelated to the features listed above.</div>
@@ -313,7 +313,7 @@
         <li>Provide and improve core app features (prayer times, Quran reader, quiz battles).</li>
         <li>Identify your account across sessions and devices.</li>
         <li>Display your quiz points, level, and battle history inside the App.</li>
-        <li>Send local notifications for prayer times and reminders — we do not send marketing messages.</li>
+        <li>Send local notifications for prayer times, reminders and Islamic occasions (such as Arafah and the white days) — we do not send marketing messages.</li>
         <li>Show advertisements and measure their performance (through Google AdMob).</li>
       </ul>
       <p>We do not sell your personal data and do not use it for profiling. Apart from the advertising described above, we do not use your data for any purpose beyond what is needed to operate the App.</p>
@@ -342,7 +342,7 @@
 
     <section id="s5">
       <h2><span class="sec-num">05</span>Data Storage &amp; Security</h2>
-      <p>Your sign-in account is held by Firebase Authentication and your online battle records are stored in Google Cloud Firestore, with industry-standard encryption in transit (TLS) and at rest. Your points, quiz progress and app preferences (Azan settings, language) are stored locally on your device using Android DataStore and are never transmitted.</p>
+      <p>Your sign-in account is held by Firebase Authentication and your online battle records are stored in Google Cloud Firestore, with industry-standard encryption in transit (TLS) and at rest. Your points, quiz progress, Quran bookmarks and notes, and app preferences (Azan settings, language) are stored locally on your device using Android DataStore and are never transmitted.</p>
       <p>Location coordinates are used momentarily to compute prayer times and are not sent to our own servers or stored by us outside your device. To determine your position, the device location services you use (Google Play Services or Huawei Mobile Services) may process your location under their own privacy policies.</p>
       <p>We implement reasonable technical safeguards; however, no system is completely secure. If you believe your data has been compromised, please contact us immediately.</p>
     </section>
@@ -374,7 +374,7 @@
           <li><strong>In the app (instant):</strong> open Settings → <em>Delete account &amp; data</em> and confirm.</li>
           <li><strong>By email:</strong> if you can no longer open the App, write to <a href="mailto:nemonegm@gmail.com?subject=Delete%20my%20Nur%20App%20account" style="color:var(--accent)">nemonegm@gmail.com</a> with the subject "Delete my Nur App account" and your display name or sign-in email. We will confirm and delete your data within 7 business days.</li>
         </ol>
-        <p><strong>Data deleted:</strong> your sign-in account held by Firebase Authentication (display name, email address, profile photo URL, user ID), your online battle records in Cloud Firestore (user ID, display name, answers), and everything stored on your device (points, progress, favourites). <strong>Data kept:</strong> none, except where the law requires us to keep it.</p>
+        <p><strong>Data deleted:</strong> your sign-in account held by Firebase Authentication (display name, email address, profile photo URL, user ID), your online battle records in Cloud Firestore (user ID, display name, answers), and everything stored on your device (points, progress, favourites, bookmarks and notes). <strong>Data kept:</strong> none, except where the law requires us to keep it.</p>
       </div>
     </section>
 
@@ -425,7 +425,7 @@
         <span>Nur App — نور</span>
         <span>开发者：Nemodroid</span>
         <span>生效日期：2025年9月2日</span>
-        <span>最后更新：2026年10月7日</span>
+        <span>最后更新：2026年10月10日</span>
       </div>
     </div>
 
@@ -459,11 +459,11 @@
         <tbody>
           <tr><td><strong>位置信息</strong></td><td>GPS 坐标</td><td>计算您所在位置的准确礼拜时间和朝拜方向（基卜拉）</td><td>可选 — 您也可以手动输入城市名称</td></tr>
           <tr><td><strong>账户信息</strong></td><td>显示名称、电子邮箱、头像链接</td><td>为在线功能（知识对战、积分排行）创建并识别您的账户</td><td>可选 — 访客模式无需注册账户</td></tr>
-          <tr><td><strong>设备标识符</strong></td><td>Android ID（仅限访客账户）</td><td>在无需账户的情况下跨会话保存您的进度和积分</td><td>访客模式下自动使用</td></tr>
-          <tr><td><strong>在线对战记录</strong></td><td>用户 ID、显示名称、在线知识对战的答题和结果</td><td>在玩家之间进行在线知识对战</td><td>仅在您玩在线对战时</td></tr>
+          <tr><td><strong>访客标识符</strong></td><td>在您设备上随机生成的访客 ID（仅限访客账户）</td><td>在无需账户的情况下跨会话保存您的进度和积分</td><td>访客模式下自动使用</td></tr>
+          <tr><td><strong>在线对战记录</strong></td><td>用户 ID、显示名称、在线知识对战的答题和结果</td><td>在玩家之间进行在线知识对战</td><td>仅在您玩在线对战时。对战房间是临时的，对战结束或过期后会被删除</td></tr>
           <tr><td><strong>技术诊断信息</strong></td><td>服务诊断以及设备和应用信息</td><td>保障登录、数据库和定位服务正常运行（由 Firebase、Google Play 服务和华为移动服务自动收集）</td><td>自动 — 由这些服务处理</td></tr>
           <tr><td><strong>广告数据</strong></td><td>广告标识符、IP 地址及据此推断的大致位置、设备和应用信息、广告互动、崩溃及性能诊断信息</td><td>展示广告并衡量广告效果（展示广告时由 Google AdMob 收集）</td><td>仅在展示广告时 — 您可以在设备设置中重置广告标识符或关闭个性化广告</td></tr>
-          <tr><td><strong>设备本地数据</strong></td><td>积分、问答进度、念珠记录、收藏、召唤礼拜类型、提醒时间、语言偏好</td><td>显示您的进度并保存您的偏好设置</td><td>仅存储在您的设备上 — 不会发送给我们</td></tr>
+          <tr><td><strong>设备本地数据</strong></td><td>积分、问答进度、念珠记录、收藏、古兰经书签和您的笔记、阅读位置、每日诵读目标和进度、召唤礼拜类型、提醒设置（包括伊斯兰节日提醒）、语言偏好</td><td>显示您的进度并保存您的偏好设置</td><td>仅存储在您的设备上 — 不会发送给我们（古兰经搜索也完全在您的设备上运行）</td></tr>
         </tbody>
       </table>
       <div class="callout">我们<strong>不</strong>收集支付信息、精确健康数据、通讯录、照片、摄像头、麦克风，或与上述功能无关的任何数据。</div>
@@ -475,7 +475,7 @@
         <li>提供和改善核心应用功能（礼拜时间、古兰经阅读、知识对战）。</li>
         <li>在不同会话和设备之间识别您的账户。</li>
         <li>在应用内显示您的问答积分、等级和对战历史。</li>
-        <li>发送礼拜时间和提醒的本地通知 — 我们不发送营销信息。</li>
+        <li>发送礼拜时间、提醒和伊斯兰节日（如阿拉法日和白日）的本地通知 — 我们不发送营销信息。</li>
         <li>展示广告并衡量广告效果（通过 Google AdMob）。</li>
       </ul>
       <p>我们不会出售您的个人数据，也不会将其用于用户画像。除上述广告用途外，我们不会将您的数据用于运营应用所需范围以外的任何目的。</p>
@@ -504,7 +504,7 @@
 
     <section id="z5">
       <h2><span class="sec-num">05</span>数据存储与安全</h2>
-      <p>您的登录账户由 Firebase 身份验证保管，您的在线对战记录存储在 Google Cloud Firestore 中，采用行业标准的传输加密（TLS）和静态加密。您的积分、问答进度和应用偏好（召唤礼拜设置、语言）使用 Android DataStore 存储在您的设备本地，不会被传输。</p>
+      <p>您的登录账户由 Firebase 身份验证保管，您的在线对战记录存储在 Google Cloud Firestore 中，采用行业标准的传输加密（TLS）和静态加密。您的积分、问答进度、古兰经书签和笔记以及应用偏好（召唤礼拜设置、语言）使用 Android DataStore 存储在您的设备本地，不会被传输。</p>
       <p>位置坐标仅用于即时计算礼拜时间，不会发送到我们自己的服务器，我们也不会在您的设备以外存储。为确定您的位置，您使用的设备定位服务（Google Play 服务或华为移动服务）可能会根据其自身的隐私政策处理您的位置信息。</p>
       <p>我们采取合理的技术保障措施；但没有任何系统是完全安全的。如果您认为您的数据已被泄露，请立即联系我们。</p>
     </section>
@@ -536,7 +536,7 @@
           <li><strong>在应用内（立即生效）：</strong>打开“设置”→“删除账户和数据”并确认。</li>
           <li><strong>通过电子邮件：</strong>如果您无法再打开应用，请发送邮件至 <a href="mailto:nemonegm@gmail.com?subject=Delete%20my%20Nur%20App%20account" style="color:var(--accent)">nemonegm@gmail.com</a>，主题为"Delete my Nur App account"，并提供您的显示名称或登录邮箱。我们将确认请求并在7个工作日内删除您的数据。</li>
         </ol>
-        <p><strong>将被删除的数据：</strong>Firebase 身份验证中的登录账户（显示名称、电子邮箱、头像链接、用户 ID）、Cloud Firestore 中的在线对战记录（用户 ID、显示名称、答题），以及存储在您设备上的所有数据（积分、进度、收藏）。<strong>保留的数据：</strong>无，法律要求保留的除外。</p>
+        <p><strong>将被删除的数据：</strong>Firebase 身份验证中的登录账户（显示名称、电子邮箱、头像链接、用户 ID）、Cloud Firestore 中的在线对战记录（用户 ID、显示名称、答题），以及存储在您设备上的所有数据（积分、进度、收藏、书签和笔记）。<strong>保留的数据：</strong>无，法律要求保留的除外。</p>
       </div>
     </section>
 
@@ -585,7 +585,7 @@
         <span>تطبيق نور — Nur App</span>
         <span>المطوّر: Nemodroid</span>
         <span>تاريخ السريان: 2 سبتمبر 2025</span>
-        <span>آخر تحديث: 7 أكتوبر 2026</span>
+        <span>آخر تحديث: 10 أكتوبر 2026</span>
       </div>
     </div>
 
@@ -619,11 +619,11 @@
         <tbody>
           <tr><td><strong>الموقع</strong></td><td>إحداثيات GPS</td><td>حساب مواقيت الصلاة واتجاه القبلة بدقة حسب موقعك</td><td>اختياري — يمكنك إدخال المدينة يدويًا</td></tr>
           <tr><td><strong>معلومات الحساب</strong></td><td>الاسم المعروض، البريد الإلكتروني، رابط صورة الملف الشخصي</td><td>إنشاء حسابك وتعريفه للميزات الإلكترونية (مواجهات المسابقات)</td><td>اختياري — وضع الضيف لا يتطلب حسابًا</td></tr>
-          <tr><td><strong>معرّف الجهاز</strong></td><td>Android ID (لحسابات الضيف فقط)</td><td>الحفاظ على جلستك بين مرات تشغيل التطبيق دون حساب</td><td>يُستخدم تلقائيًا في وضع الضيف</td></tr>
-          <tr><td><strong>سجلات المواجهات الإلكترونية</strong></td><td>معرّف المستخدم، الاسم المعروض، إجابات ونتائج مواجهات المسابقات الإلكترونية</td><td>تشغيل مواجهات المسابقات الإلكترونية بين اللاعبين</td><td>فقط عند لعب المواجهات الإلكترونية</td></tr>
+          <tr><td><strong>معرّف الضيف</strong></td><td>معرّف عشوائي يُنشأ على جهازك (لحسابات الضيف فقط)</td><td>الحفاظ على جلستك بين مرات تشغيل التطبيق دون حساب</td><td>يُستخدم تلقائيًا في وضع الضيف</td></tr>
+          <tr><td><strong>سجلات المواجهات الإلكترونية</strong></td><td>معرّف المستخدم، الاسم المعروض، إجابات ونتائج مواجهات المسابقات الإلكترونية</td><td>تشغيل مواجهات المسابقات الإلكترونية بين اللاعبين</td><td>فقط عند لعب المواجهات الإلكترونية. غرف المواجهات مؤقتة وتُحذف عند انتهاء المواجهة أو انتهاء صلاحيتها</td></tr>
           <tr><td><strong>التشخيصات التقنية</strong></td><td>تشخيصات الخدمات ومعلومات الجهاز والتطبيق</td><td>إبقاء خدمات تسجيل الدخول وقاعدة البيانات والموقع تعمل (تجمعها تلقائيًا خدمات Firebase وGoogle Play وHuawei Mobile)</td><td>تلقائي — تتولاه تلك الخدمات</td></tr>
           <tr><td><strong>بيانات الإعلانات</strong></td><td>معرّف الإعلانات، عنوان IP والموقع التقريبي المستنتج منه، معلومات الجهاز والتطبيق، التفاعل مع الإعلانات، وبيانات الأعطال والأداء</td><td>عرض الإعلانات وقياس أدائها (تجمعها Google AdMob عند عرض الإعلانات)</td><td>فقط عند عرض الإعلانات — يمكنك إعادة ضبط معرّف الإعلانات أو إيقاف الإعلانات المخصّصة من إعدادات جهازك</td></tr>
-          <tr><td><strong>البيانات على جهازك</strong></td><td>النقاط، تقدّم المسابقات، جلسات التسبيح، المفضّلة، نوع الأذان، دقائق التذكير، تفضيل اللغة</td><td>عرض تقدّمك وتذكّر تفضيلاتك</td><td>تُخزَّن على جهازك فقط — ولا تُرسَل إلينا</td></tr>
+          <tr><td><strong>البيانات على جهازك</strong></td><td>النقاط، تقدّم المسابقات، جلسات التسبيح، المفضّلة، علامات القرآن وملاحظاتك، موضع القراءة، هدف الورد اليومي وتقدّمه، نوع الأذان، إعدادات التذكير (بما فيها تذكيرات المناسبات الإسلامية)، تفضيل اللغة</td><td>عرض تقدّمك وتذكّر تفضيلاتك</td><td>تُخزَّن على جهازك فقط — ولا تُرسَل إلينا (والبحث في القرآن يتم بالكامل على جهازك)</td></tr>
         </tbody>
       </table>
       <div class="callout">نحن <strong>لا</strong> نجمع معلومات الدفع، ولا بيانات صحية دقيقة، ولا جهات الاتصال، ولا الصور، ولا الكاميرا، ولا الميكروفون، ولا أي بيانات لا علاقة لها بالميزات المذكورة أعلاه.</div>
@@ -635,7 +635,7 @@
         <li>تقديم ميزات التطبيق الأساسية وتحسينها (مواقيت الصلاة، قارئ القرآن، مواجهات المسابقات).</li>
         <li>تعريف حسابك عبر الجلسات والأجهزة.</li>
         <li>عرض نقاط المسابقات والمستوى وسجل المواجهات داخل التطبيق.</li>
-        <li>إرسال إشعارات محلية لمواقيت الصلاة والتذكيرات — ولا نرسل رسائل تسويقية.</li>
+        <li>إرسال إشعارات محلية لمواقيت الصلاة والتذكيرات والمناسبات الإسلامية (مثل يوم عرفة والأيام البيض) — ولا نرسل رسائل تسويقية.</li>
         <li>عرض الإعلانات وقياس أدائها (عبر Google AdMob).</li>
       </ul>
       <p>نحن لا نبيع بياناتك الشخصية ولا نستخدمها لبناء ملفات تعريفية. وباستثناء الإعلانات الموضّحة أعلاه، لا نستخدم بياناتك لأي غرض يتجاوز ما يلزم لتشغيل التطبيق.</p>
@@ -664,7 +664,7 @@
 
     <section id="a5">
       <h2><span class="sec-num">05</span>تخزين البيانات وأمانها</h2>
-      <p>يحتفظ بحساب تسجيل دخولك خدمة مصادقة Firebase، وتُخزَّن سجلات مواجهاتك الإلكترونية في Google Cloud Firestore مع تشفير قياسي أثناء النقل (TLS) وعند التخزين. أما نقاطك وتقدّمك في المسابقات وتفضيلات التطبيق (إعدادات الأذان، اللغة) فتُخزَّن محليًا على جهازك باستخدام Android DataStore ولا تُرسَل أبدًا.</p>
+      <p>يحتفظ بحساب تسجيل دخولك خدمة مصادقة Firebase، وتُخزَّن سجلات مواجهاتك الإلكترونية في Google Cloud Firestore مع تشفير قياسي أثناء النقل (TLS) وعند التخزين. أما نقاطك وتقدّمك في المسابقات وعلامات القرآن وملاحظاتك وتفضيلات التطبيق (إعدادات الأذان، اللغة) فتُخزَّن محليًا على جهازك باستخدام Android DataStore ولا تُرسَل أبدًا.</p>
       <p>تُستخدم إحداثيات الموقع لحظيًا لحساب مواقيت الصلاة، ولا تُرسَل إلى خوادمنا الخاصة ولا نخزّنها خارج جهازك. ولتحديد موقعك قد تعالج خدمات الموقع في جهازك (خدمات Google Play أو خدمات Huawei Mobile) موقعك وفق سياسات الخصوصية الخاصة بها.</p>
       <p>نطبّق إجراءات حماية تقنية معقولة، إلا أنه لا يوجد نظام آمن بالكامل. إذا كنت تعتقد أن بياناتك تعرّضت للاختراق فيُرجى التواصل معنا فورًا.</p>
     </section>
@@ -696,7 +696,7 @@
           <li><strong>من داخل التطبيق (فوري):</strong> افتح الإعدادات ← «حذف الحساب والبيانات» ثم أكّد.</li>
           <li><strong>عبر البريد الإلكتروني:</strong> إذا لم تعد قادرًا على فتح التطبيق، راسلنا على <a href="mailto:nemonegm@gmail.com?subject=Delete%20my%20Nur%20App%20account" style="color:var(--accent)">nemonegm@gmail.com</a> بعنوان "Delete my Nur App account" مع اسمك المعروض أو بريد تسجيل الدخول. سنؤكد الطلب ونحذف بياناتك خلال 7 أيام عمل.</li>
         </ol>
-        <p><strong>البيانات المحذوفة:</strong> حساب تسجيل الدخول لدى مصادقة Firebase (الاسم المعروض، البريد الإلكتروني، رابط صورة الملف الشخصي، معرّف المستخدم)، وسجلات مواجهاتك الإلكترونية في Cloud Firestore (معرّف المستخدم، الاسم المعروض، الإجابات)، وكل ما هو مخزَّن على جهازك (النقاط، التقدّم، المفضّلة). <strong>البيانات المحتفَظ بها:</strong> لا شيء، إلا ما يُلزمنا القانون بالاحتفاظ به.</p>
+        <p><strong>البيانات المحذوفة:</strong> حساب تسجيل الدخول لدى مصادقة Firebase (الاسم المعروض، البريد الإلكتروني، رابط صورة الملف الشخصي، معرّف المستخدم)، وسجلات مواجهاتك الإلكترونية في Cloud Firestore (معرّف المستخدم، الاسم المعروض، الإجابات)، وكل ما هو مخزَّن على جهازك (النقاط، التقدّم، المفضّلة، العلامات والملاحظات). <strong>البيانات المحتفَظ بها:</strong> لا شيء، إلا ما يُلزمنا القانون بالاحتفاظ به.</p>
       </div>
     </section>
 
